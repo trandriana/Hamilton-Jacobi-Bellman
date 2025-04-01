@@ -1,8 +1,10 @@
-# Numerical approximation of Hamilton-Jacobi-Bellman equations appearing in game theory
+# Numerical approximation of a backward parabolitc partial differential equation
 
-In this repository, we implement the numerical approximation of an **Hamilton-Jacobi-Bellman** problem that appears in game theory. The numerical analysis is discussed in a more general framework in 
+In this repository, I implement a numerical scheme that compute the solution $V(t,x)$ of a parabolic partial differential equation of the form
 
-- [Numerical approximation of the value of a stochastic differential games with asymmetric information](https://doi.org/10.1137/19M1309997)
-- [A probabilistic numerical scheme for an obstacle problem arising in game theory](https://link.springer.com/article/10.1007/s00245-012-9175-z)
+$$
+\partial_t V(t,x) + \tfrac12\sigma^2(t,x)D_x^2 V(t,x) = H(t,x),\quad V(T,x) = g(x).
+$$
 
-For the implementation, see the section **6.2 Numerical experiments** of [Numerical approximation of the value of a stochastic differential games with asymmetric information](https://doi.org/10.1137/19M1309997).
+We use a probabilistic numerical scheme, also called layer method for the time-discretization. For a brief overview and an extensive analysis, see [A probabilistic approach to the solution of the Neumann
+problem for nonlinear parabolic equation](https://doi.org/10.1093/imanum/22.4.599).
